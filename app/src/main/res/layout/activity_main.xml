@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView android:text="Example"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/explanation"
+        android:id="@+id/textView"
+        android:layout_below="@+id/textview"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sourceTV"
+        android:hint="Copy text"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/destTV"
+        android:hint="paste text"
+        android:layout_below="@+id/sourceTV"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Copy text"
+        android:id="@+id/copy_button"
+        android:layout_below="@+id/destTV"
+        android:onClick="buttonOnClick"
+        android:layout_alignLeft="@+id/destTV"
+        android:layout_alignStart="@+id/destTV"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paste text"
+        android:id="@+id/paste_button"
+        android:layout_below="@+id/destTV"
+        android:layout_alignRight="@+id/destTV"
+        android:layout_alignEnd="@+id/destTV"
+        android:onClick="buttonOnClick"
+        android:layout_toRightOf="@+id/copy_button"
+        android:layout_toEndOf="@+id/copy_button"
+        />
+
+</RelativeLayout>

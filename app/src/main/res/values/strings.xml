@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClipboardExample</string>
+    <string name="explanation">This example shows how to use the clipboard
+    methods to copy and past between windows.</string>
+</resources>
